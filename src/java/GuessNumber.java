@@ -29,14 +29,12 @@ private String guessString;
         this.guessString = guessString;
     }
     public String getResponse(){
-        if(guessString == null)
-            return ""; // No user input yet
         int guess = Integer.parseInt(guessString);
-        if(guess < number){
-            return "Too low";
-        }
-        else if(guess == number){
+        if(guess == number){
             return "You got it!";
+        }
+        else if(guess < number){
+            return "Too low";
         }
         else{
             return "Too high";
